@@ -6,7 +6,7 @@ class Jobs extends Component {
             <div className={this.props.cssName}>
                 <h3>{this.props.position}</h3>
                 <h4>{this.props.year}</h4>
-                <p>
+                <p className="desc"> 
                     {this.props.jobDesc}
                 </p>
             </div>

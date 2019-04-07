@@ -12,11 +12,9 @@ const About = () => {
                     <img src={photo} alt="Natalia Chandra" className="bio-image"/>
                     
                     <div className="bio">
-                        <p><i className="fas fa-envelope"></i> nchandra.natalia@gmail.com</p>
-                        <p><i className="fas fa-phone-square"></i> (123) 4567890</p>
-                        <p><i className="fas fa-map-marker-alt"></i> Adalbertsteinweg 107, 52070 Aachen</p>
-                        <p>My Name is Natalia Chandra, I'm a Front-End Web Developer. I love to create and build websites which are mobile-first ready, fully responsive and user-friendly. I built my portfolio site from grounds up by using all the skills that I know. I'm always motivated and have desire to learn more.</p>
-                        <p>While I'm not sitting in front of my computer, debugging some code or trying to position elements right, I love to hang out with my friends, watch movies, listen to music, eating, etc</p>
+                        <h3>My Name is Natalia Chandra, I'm a Front-End Web Developer. I love to create and build websites which are mobile-first ready, fully responsive and user-friendly. I built my portfolio site from grounds up by using all the skills that I know. I'm always motivated and have desire to learn more.</h3>
+                        <br/>
+                        <h3>While I'm not sitting in front of my computer, debugging some code or trying to position elements right, I love to hang out with my friends, watch movies, listen to music, eating, etc</h3>
                     </div>
                     <div className="work">
                         <h3 className="text-secondary">Work Experiences <i className="fas fa-briefcase"></i></h3>
@@ -70,19 +68,20 @@ const About = () => {
 
                 <div className="edu-info">
                     <div className="edu">
+                    <br/>
                         <h3 className="text-secondary">Education <i className="fas fa-graduation-cap"></i></h3>
                     </div>
                     <div className="job edu-1">
                         <h3>Bachelor Of Science in Information System (B.Sc)</h3>
                         <h3>2006 - 2010</h3>
                         <h5>Bina Nusantara University, Indonesia</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium obcaecati, molestias perferendis fuga incidunt architecto.</p>
+                        <p>Bachelor Thesis: Analysis and System Information Design for Palm Oil Production and the Potential CPO Industry based on Web Application with Spatial Database Approach in Directorate General of Plantations. </p>
                     </div>
                     <div className="job edu-2">
                         <h3>Master Of Science in Software System Engineering (M.Sc)</h3>
                         <h3>2010 - 2012</h3>
                         <h5>RWTH Aachen Univerity, Germany and King Mongkut's University of Technology North Bangkok, Thailand</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium obcaecati, molestias perferendis fuga incidunt architecto.</p>
+                        <p>Master Thesis: Development of XAM (eXercise and Assignment Management) Online Access and Document Generation.</p>
                     </div> 
                 </div>
               

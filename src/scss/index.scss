@@ -80,9 +80,7 @@ main{
     'work work'
     'job1 job2'
     'job3 job4'
-    'job5 .'
-    'edu edu'
-    'edu1 edu2';
+    'job5 .';
     grid-template-columns: repeat(2, 1fr);  
 }
 .bio-image{
@@ -96,7 +94,7 @@ main{
 
 .bio{
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: justify;
 }
 .work{

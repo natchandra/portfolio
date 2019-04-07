@@ -8,14 +8,14 @@ const Contact = () => {
             <h2 className="sm-heading">This is how you can reach Me</h2>
             <div className="boxes">
                 <div>
-                    <span className="text-secondary">Email: </span> nchandra.natalia@gmail.com
+                    <span className="text-secondary"><i className="fas fa-envelope"> Email:</i></span> nchandra.natalia@gmail.com
                 </div>
                 <div>
-                    <span className="text-secondary">Phone: </span> (123) 123456
+                    <span className="text-secondary"><i className="fas fa-phone-square"> Phone:</i> </span> (123) 123456
                 </div>
                     
                 <div>
-                    <span className="text-secondary">Address: </span> Testing Address
+                    <span className="text-secondary"><i className="fas fa-map-marker-alt"> Address:</i> </span> Adalbertsteinweg 107, 52070 Aachen
                 </div>
             </div>
         </main>
