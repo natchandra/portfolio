@@ -11,17 +11,19 @@ import Skills from './components/Skills';
 class App extends Component {
   render() {
     return (
+      <div>
       <BrowserRouter>
         <div className="App">
           <Navbar />
           <Route exact path="/" component={Home} />
-          <Route path="/portfolio/" component={Home}/>
+          <Route path="/portfolio" component={Home}/>
           <Route path="/About" component={About} />
           <Route path="/Project" component={Project} />
           <Route path="/Contact" component={Contact} />
           <Route path="/Skills" component={Skills} />
         </div>
       </BrowserRouter>
+      </div>
     );
   }
 }
