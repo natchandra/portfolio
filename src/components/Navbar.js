@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import photo from '../img/girl_avatar.jpg';
+import Home from '../components/Home';
 
 class Navbar extends Component{
     state = {
