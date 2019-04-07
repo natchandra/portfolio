@@ -1,0 +1,263 @@
+@import 'config.scss';
+@import 'menu.scss';
+
+*{
+    box-sizing: border-box;
+}
+body{
+    @include background();
+    background: $primary-color;
+    color: #fff;
+    //color: set-text-color($primary-color);
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+//heading
+h1,h2,h3{
+    margin: 0;
+    font-weight: 400;
+    &.lg-heading{
+        font-size: 6rem;
+    }
+    &.sm-heading{
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
+    }
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+header{
+   position: fixed;
+   z-index: 2;
+   width: 100%; 
+}
+.text-secondary{
+    color: $secondary-color;
+}
+main{
+    padding: 4rem;
+    //height: 100%;
+    min-height: calc(100vh - 60px);
+    .icons{
+        margin-top: 1rem;
+        a{
+            padding: 0.4rem;
+            &:hover{
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
+    }
+
+    &.home{
+       overflow: hidden;
+       h1{
+           margin-top: 20vh;
+       } 
+    }
+}
+//edu-info
+.edu-info{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+    'edu edu'
+    'edu1 edu2';
+    grid-template-columns: repeat(2,1fr);
+}
+//about info
+.about-info{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'bioimage bio'
+    'work work'
+    'job1 job2'
+    'job3 job4'
+    'job5 .'
+    'edu edu'
+    'edu1 edu2';
+    grid-template-columns: repeat(2, 1fr);  
+}
+.bio-image{
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border: $secondary-color 3px solid;
+}
+
+.bio{
+    grid-area: bio;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+.work{
+    grid-area: work;
+    font-size: 1.5rem;
+}
+
+.edu{
+    grid-area: edu;
+    font-size: 1.5rem;
+}
+
+.job-1{
+    grid-area: job1;
+}
+.job-2{
+    grid-area: job2;
+}
+.job-3{
+    grid-area: job3;
+}
+.job-4{
+    grid-area: job4;
+}
+.job-5{
+    grid-area: job5;
+}
+.edu1{
+    grid-area: edu1;
+}
+.edu2{
+    grid-area: edu2;
+}
+.job{
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+}
+
+//work/projects
+.projects{
+    display:grid;
+    grid-gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
+    img{
+        width: 100;
+        border: 3px #fff solid;
+        &:hover{
+            opacity: 0.5;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+    }
+}
+
+//Contact Page
+
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    div{
+        font-size: 2rem;
+        border: 3px #fff solid;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+
+        &:hover{
+            padding: 2.5rem 3.5rem;
+            background: $secondary-color;
+            color: #fff;
+            span{
+                color: #fff;
+            }
+        }
+    }
+}
+
+//button styles
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    &:hover{
+        background-color: $secondary-color;
+        color: #fff;
+    }
+}
+
+.btn-dark{
+    @extend .btn;
+    background: darken( $primary-color, 50);
+    color: #fff;
+}
+
+.btn-light{
+    @extend .btn;
+    background: lighten($primary-color,50);
+    color: #333;
+}
+
+#main-footer{
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    //color: set-text-color($primary-color);
+    color: #fff;
+    height: 60px;
+}
+
+//progress bar
+.progress{
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 50px;
+}
+.bar{
+    height: 30px;
+    background-color: $secondary-color;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 50px;
+}
+//end of progress bar
+.text-third{
+    color:#fff;
+}
+
+//skills 
+.skill-info{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'front back'
+    'framework programming'
+    'tools .';
+    grid-template-columns: repeat(2, 1fr);  
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    border: 3px #fff solid;
+    padding: 1rem 1rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+}
+
+.skill-box{
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+}
+
+@import 'mobile.scss';

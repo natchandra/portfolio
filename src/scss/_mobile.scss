@@ -1,0 +1,136 @@
+//WideScreen
+@include mediaXL{
+    .projects{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+//dekstop and Laptop
+@include mediaLG{
+    .projects{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+//tablets
+@include mediaMD{
+    main{
+        align-items: center;
+        text-align: center;
+        .lg-heading{
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+    ul.menu-nav,div.menu-branding{
+        float: none;
+        width: 100%;
+        min-height: 0;
+        &.show{
+            transform: translate3d(0,0,0);
+        }  
+    }
+    .menu-nav{
+        height: 75vh;
+        transform: translate3d(-100%,0,0);
+        font-size: 24px;
+    }
+
+    .menu-branding{
+        height: 25vh;
+        transform: translate3d(100%,0,0);
+        
+        //small image size needed!
+        .potrait{
+            background: url(../img/girl_avatar.jpg);
+            width: 150px;
+            height: 150px;
+        }
+        //
+    }
+    .edu-info{
+        grid-template-areas: 
+        'edu'
+        'edu1'
+        'edu2';
+        grid-template-columns: 1fr;
+    }
+    .about-info{
+        grid-template-areas: 
+        'bioimage'
+        'bio'
+        'work'
+        'job1'
+        'job2'
+        'job3'
+        'job4'
+        'job5';
+
+        grid-template-columns: 1fr;
+    }
+    .projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+//Set Text Color
+@function set-text-color($color){
+    @if(lightness($color) > 40){
+        @return #000;
+    }@else{
+        @return #fff;
+    }
+}
+
+//Smartphone
+@include mediaSM{
+    main{
+        align-items: center;
+        text-align: center;
+        h1.lg-heading{
+            line-height: 1;
+            margin-bottom: 1rem;
+            font-size: 60px;
+        }
+    }
+    main#home h1{
+        margin-top: 50vh;
+    }
+    .edu-info{
+        grid-template-areas: 
+        'edu'
+        'edu1'
+        'edu2';
+         grid-template-columns: 1fr;
+    }
+    .about-info{
+        grid-template-areas: 
+        'bioimage'
+        'bio'
+        'work'
+        'job1'
+        'job2'
+        'job3'
+        'job4'
+        'job5';
+
+        grid-template-columns: 1fr;
+    }
+    .projects{
+        grid-template-columns: 1fr;
+    }
+    .boxes div{
+        font-size: 20px;
+    }
+
+    .skill-info{
+        display: grid;
+        grid-gap: 30px;
+        grid-template-areas: 
+        'front'
+        'back'
+        'framework'
+        'programming'
+        'tools';
+        grid-template-columns:  1fr;  
+    }
+}
